@@ -1,0 +1,14 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\authController;
+
+Route::get('/', function () {
+   return view('welcome');
+});
+
+Route::get('/login', [authController::class, 'login']);
+
+Route::post('/verify', [authController::class, 'verify']);
+Route::post('/logout', [authController::class, 'logout']);
+
