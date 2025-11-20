@@ -7,13 +7,17 @@ use Illuminate\Http\Request;
 class authController extends Controller
 {
     //
-    public function login()
-    {
+    public function login(){
         return view('auth');
     }
 
-    public function verify(Request $request)
-    {
+    public function logout(){
+        auth()->logout();
+        return redirect()->route('login');
+    }
+
+    public function authenticar(Request $request){
+        
         $request->validate([
             'name' => 'required',
             'password' => 'required',
@@ -28,9 +32,12 @@ class authController extends Controller
         ]);
     }
 
-    public function logout()
-    {
-        auth()->logout();
-        return redirect()->route('login');
+    public function dashboard(){
+        if (!auth()->check()) {
+
+            return redirect()->route('login');
+        }else{
+            return view('dashboard');
+        }
     }
 }

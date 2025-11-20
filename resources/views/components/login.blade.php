@@ -41,11 +41,11 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Bienvenido</h1>
                                     </div>
-                                    <form class="user">
+                                    
                                        
-                                        {{ $slot }}
+                                    {{ $slot }}
 
-                                    </form>
+                                   
                                 </div>
                             </div>
                         </div>
