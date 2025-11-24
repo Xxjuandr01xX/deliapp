@@ -11,6 +11,12 @@ Route::get('/login', [authController::class, 'login']);
 
 Route::post('/authenticar', [authController::class, 'authenticar'])->name('authenticar');
 
+Route::group([
+    'middleware' => 'auth',
+], function () {
+    Route::get('/dashboard', [authController::class, 'dashboard'])->name('dashboard');
+});
+
 
 
 

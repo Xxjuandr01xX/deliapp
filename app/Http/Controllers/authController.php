@@ -34,7 +34,6 @@ class authController extends Controller
 
     public function dashboard(){
         if (!auth()->check()) {
-
             return redirect()->route('login');
         }else{
             return view('dashboard');
