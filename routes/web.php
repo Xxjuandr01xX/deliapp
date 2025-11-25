@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authController;
+use App\Http\Controllers\userController;
 
 Route::get('/', function () {
    return view('welcome');
@@ -15,6 +16,7 @@ Route::group([
     'middleware' => 'auth',
 ], function () {
     Route::get('/dashboard', [authController::class, 'dashboard'])->name('dashboard');
+    Route::get('/profile', [userController::class, 'userProfile'])->name('profile');
 });
 
 
