@@ -1,16 +1,25 @@
  <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+        <a class="nav-link" href="{{ route('dashboard') }}">
+            <i class="fas fa-fw fa-home"></i>
+            <span>Principal</span>
         </a>
     </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-   <!-- Nav Item - Utilities Collapse Menu -->
+
+    <!-- Nav Item - Alerts -->
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('pedidos') }}">
+            <i class="fas fa-fw fa-shopping-cart"></i>
+            <span>pedidos</span>
+        </a>
+    </li>
+
+   <!-- Nav Item - Utilities Collapse Menu -->
+    <!--<li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
@@ -26,4 +35,4 @@
                 <a class="collapse-item" href="utilities-other.html">Other</a>
             </div>
         </div>
-    </li>
+    </li>-->
