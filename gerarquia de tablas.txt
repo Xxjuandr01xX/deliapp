@@ -1,0 +1,24 @@
+
+AGREGAR_INGREDIENTES(+)                                   QUITAR_INGREDIENTES(+)
+
+---------------------------------------------------------------------------
+
+DETALLE_PEDIDOS(++)             
+
+--------------------------------------------------------------------------
+
+PEDIDOS(+++)
+
+--------------------------------------------------------------------------
+
+INGREDIENTES(++++)
+
+
+PRODUCTOS(+++++)       
+
+
+CATEGORIAS(++++++)                                  CAT_ADICIONALES(++++++)
+
+---------------------------------------------------------------------------
+
+nota: las tablas que se encuentran en el nivel mas bajo no tienen llave primaria.
