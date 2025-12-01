@@ -8,6 +8,10 @@ class Main extends Component
 {
     public function render()
     {
-        return view('livewire.pedidos.main');
+        $state = [];
+        
+        return view('livewire.pedidos.main', [
+            'state' => $state
+        ]);
     }
 }
