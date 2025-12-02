@@ -17,7 +17,8 @@ class catAdicionalesSedeer extends Seeder
          * generame 10 ingredientes adicionales de comida rapida
          */
 
-        DB::table('cat_ingredientes')->insert([
+       
+       DB::table('cat_ingredientes')->insert([
             'name' => 'Queso',
             'slug' => 'queso',
         ]);
@@ -66,5 +67,32 @@ class catAdicionalesSedeer extends Seeder
             'name' => 'Peperoni',
             'slug' => 'peperoni',
         ]);
+        
+
+        DB::table('cat_adicionales')->insert([
+            'name' => 'Queso',
+            'slug' => 'queso',
+        ]);
+
+        DB::table('cat_adicionales')->insert([
+            'name' => 'Champiñones',
+            'slug' => 'champiñones',
+        ]);
+
+        DB::table('cat_adicionales')->insert([
+            'name' => 'Chorizo',
+            'slug' => 'chorizo',
+        ]);
+
+        DB::table('cat_adicionales')->insert([
+            'name' => 'Jalapeno',
+            'slug' => 'jalapeno',
+        ]);
+
+        DB::table('cat_adicionales')->insert([
+            'name' => 'Pimientos',
+            'slug' => 'pimientos',
+        ]);
+
     }
 }
