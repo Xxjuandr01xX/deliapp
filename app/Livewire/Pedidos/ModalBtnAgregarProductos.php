@@ -13,14 +13,15 @@ class ModalBtnAgregarProductos extends Component
 
     public $state;
 
-    public function agregarProductoAlEstado($id){
+    public function agregarProducto($id){
+    
+        $this->dispatch('agregarProducto', id:$id);
 
-        $producto = ProductosModel::find($id);
+    }
 
-        $this->state[] = $producto;
+    public function mount($state){
 
-        $this->dispatch('agregarProductoAlEstado', array:$this->state);
-
+        $this->state = $state;
     }
     
     public function render()

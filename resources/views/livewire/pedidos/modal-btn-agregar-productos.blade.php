@@ -6,7 +6,7 @@
 
     </button>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" wire:ignore.self>
     <div class="modal-dialog">
         <div class="modal-content">
         
@@ -31,7 +31,7 @@
                                 <td>{{ $producto->name }}</td>
                                 <td>{{ $producto->price }}</td>
                                 <td>
-                                    <button wire:click="agregarProductoAlEstado({{ $producto->id }})" type="button" class="btn btn-success btn-sm rounded-circle shadow">
+                                    <button wire:click="agregarProducto({{ $producto->id }})" type="button" class="btn btn-success btn-sm rounded-circle shadow">
                                         <i class="fa fa-plus"></i>
                                     </button>
                                 </td>

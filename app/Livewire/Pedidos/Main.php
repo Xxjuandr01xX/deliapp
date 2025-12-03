@@ -4,14 +4,11 @@ namespace App\Livewire\Pedidos;
 
 use Livewire\Component;
 use App\Models\ProductosModel;
+use Livewire\Attributes\On;
 
 class Main extends Component
 {
     public $state = [];
-
-    public $listenners = [
-        'agregarProductoAlEstado' => 'setState'
-    ];
 
     public function render()
     {
@@ -30,16 +27,10 @@ class Main extends Component
         return $this->state;
     }
 
-    public function setState($state){
-        $this->state[] = $state;
-    }
-
-    public function agregarProductoAlEstado(array $producto){
-
-        $res = [];
-        $res[] = $producto;
-        $this->setState($res);
-
-        
+    #[On('agregarProducto')]
+    public function agregarProducto($id){
+        $producto = ProductosModel::find($id);
+        $this->state[] = $producto;
+        return $this->state; 
     }
 }
