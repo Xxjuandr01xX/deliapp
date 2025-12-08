@@ -17,7 +17,8 @@ class Main extends Component
     {
         return view('livewire.pedidos.main', [
             'state' => $this->getState(),
-            'total' => $this->getTotal()
+            'total' => $this->getTotal(),
+            'ingredientes' => $this->getIngredientes()
         ]);
     }
 
@@ -32,6 +33,10 @@ class Main extends Component
 
     public function getTotal(){
         return $this->total;
+    } 
+
+    public function getIngredientes(){
+        return $this->ingredientes;
     }
 
     #[On('agregarProducto')]
@@ -45,8 +50,6 @@ class Main extends Component
         $this->state = array_filter($this->state, fn($producto) => $producto->id != $id);
         return $this->state;
     }
-
-    
 
 
 }

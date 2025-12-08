@@ -28,15 +28,14 @@
                                         <livewire:pedidos.cantidad-component/>
 
                                         <div class="row clearfix d-flex justify-content-center mt-4">
-                                            <div class="col-md-2">
+                                            <div class="col-2">
                                                 <button class="btn btn-primary btn-sm rounded-circle">
                                                     <i class="fas fa-minus"></i>
                                                 </button>
 
-                                                <livewire:pedidos.personalizar-producto :id="$producto->id"/>
-                                                <button class="btn btn-primary btn-sm rounded-circle">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
+                                                <livewire:pedidos.personalizar-producto :id_producto="$producto->id" />
+
+                                            
                                             </div>
                                         </div>
 
