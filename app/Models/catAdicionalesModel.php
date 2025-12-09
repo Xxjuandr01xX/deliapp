@@ -8,4 +8,12 @@ class catAdicionalesModel extends Model
 {
     //
     protected $table = 'cat_adicionales';
+    
+    protected $fillable = [
+        'id',
+        'name',
+        'slug',
+    ];
+
+
 }

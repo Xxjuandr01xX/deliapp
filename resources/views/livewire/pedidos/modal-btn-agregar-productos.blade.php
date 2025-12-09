@@ -1,8 +1,8 @@
 <div>
 
-    <button type="button" class="btn btn-primary btn-sm rounded-pill shadow" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-primary btn-sm rounded-circle shadow" data-toggle="modal" data-target="#exampleModal">
     
-    <i class="fa fa-plus"></i> Agregar productos
+    <i class="fa fa-plus"></i> 
 
     </button>
 

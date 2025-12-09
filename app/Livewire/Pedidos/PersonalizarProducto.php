@@ -4,6 +4,7 @@ namespace App\Livewire\Pedidos;
 
 use Livewire\Component;
 use App\Models\IngredientesModel;
+use App\Models\catAdicionalesModel;
 
 class PersonalizarProducto extends Component
 {
@@ -29,7 +30,8 @@ class PersonalizarProducto extends Component
     public function render()
     {
         return view('livewire.pedidos.personalizar-producto', [
-            'ingredientesSeleccionados' => $this->getIngredientes()
+            'ingredientesSeleccionados' => $this->getIngredientes(),
+            'adicionales' => catAdicionalesModel::all()
         ]);
     }
 }

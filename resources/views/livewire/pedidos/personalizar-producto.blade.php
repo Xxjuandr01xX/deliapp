@@ -27,6 +27,15 @@
         @endforeach
 
         <p class="text-center font-weight-bold mb-2 mt-2">Ingredientes Adicionales</p>
+
+        @foreach ($adicionales as $adicional)
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="{{ $adicional->id }}">
+                <label class="form-check-label" for="{{ $adicional->id }}">
+                {{ $adicional->name }}
+                </label>
+            </div>  
+        @endforeach
       </div>
     </div>
   </div>

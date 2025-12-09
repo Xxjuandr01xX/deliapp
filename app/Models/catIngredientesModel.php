@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class catIngredientesModel extends Model
 {
     protected $table = 'cat_ingredientes';
+    
     protected $fillable = [
         'id',
         'name',
