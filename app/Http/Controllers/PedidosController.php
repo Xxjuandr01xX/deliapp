@@ -11,4 +11,6 @@ class PedidosController extends Controller
 
         return view('pedidos.nuevoPedidos');
     }
+
+
 }

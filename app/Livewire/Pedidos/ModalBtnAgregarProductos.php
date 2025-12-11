@@ -12,6 +12,8 @@ class ModalBtnAgregarProductos extends Component
 {
 
     public $state;
+    public $key;
+    public $row = [];
 
     public function agregarProducto($id){
     
